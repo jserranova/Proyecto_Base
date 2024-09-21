@@ -10,7 +10,7 @@ import java.time.Duration;
 public class ConfigDriver {
 
     public static WebDriver setupChromeDriver(){
-        System.setProperty(Constants.URL,Constants.RUTA);
+        System.setProperty(Constants.WEB_GOGLE,Constants.RUTA);
         WebDriver driver = new ChromeDriver();
         driver.get(Constants.PAG);
         driver.manage().window().maximize();

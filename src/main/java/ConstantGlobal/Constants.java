@@ -11,9 +11,12 @@ public class Constants {
 
 
     //ChromeDriver
-    public  static final String URL ="webdriver.chrome.driver";
+    public  static final String WEB_GOGLE ="webdriver.chrome.driver";
     public  static final String RUTA = "./src/test/resources/driver/chromedriver.exe";
     public static final String PAG = "https://www.saucedemo.com/v1/index.html";
+
+ // FirefoxDriver
+
 
 
     // ShoppingCart
