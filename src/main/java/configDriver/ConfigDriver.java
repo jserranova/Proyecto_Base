@@ -21,7 +21,7 @@ public class ConfigDriver {
         String exePath = "./src/test/resources/driver/geckodriver.exe";
         System.setProperty("webdriver.firefox.driver",exePath);
         WebDriver driver = new FirefoxDriver();
-      
+        driver.manage().window().maximize();
         return driver;
     }
 
