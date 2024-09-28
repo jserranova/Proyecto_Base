@@ -10,7 +10,7 @@ import java.time.Duration;
 public class ConfigDriver {
 
     public static WebDriver setupChromeDriver(){
-        System.setProperty(Constants.URL,Constants.RUTA);
+        System.setProperty(Constants.DRIVER_GOOBLE,Constants.RUTA_GOOGLE);
         WebDriver driver = new ChromeDriver();
         driver.get(Constants.PAG);
         driver.manage().window().maximize();
@@ -18,9 +18,9 @@ public class ConfigDriver {
     }
 
     public static WebDriver setupFirefoxDriver(){
-        String exePath = "./src/test/resources/driver/geckodriver.exe";
-        System.setProperty("webdriver.firefox.driver",exePath);
+        System.setProperty(Constants.DRIVER_FIREFOX, Constants.RUTA_FIREFOX);
         WebDriver driver = new FirefoxDriver();
+        driver.navigate().to(Constants.PAG);
         driver.manage().window().maximize();
         return driver;
     }

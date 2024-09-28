@@ -1,34 +1,23 @@
 package testBase;
 
-import ConstantGlobal.Constants;
-import org.checkerframework.checker.units.qual.C;
-import org.junit.Before;
+import configDriver.ConfigDriver;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pageObject.PageBase;
 
 import java.time.Duration;
 
 public class TestBase {
 
-    private WebDriver driver;
+  WebDriver driver = ConfigDriver.setupFirefoxDriver();
 
     private PageBase pageBase;
 
-    private WebDriver getWebDriver() {
-        return null;
-    }
 
     @BeforeClass
     public void init() throws Exception {
-        System.setProperty(Constants.URL, Constants.RUTA);
-        driver = new ChromeDriver();
-        driver.get(Constants.PAG);
-        driver.manage().window().maximize();
 
         pageBase = PageFactory.initElements(driver, PageBase.class);
 
